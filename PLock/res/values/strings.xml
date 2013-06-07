@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PLock</string>
+    <string name="menu_settings">Settings</string>
+    
+    
+    <string name="str_upgrade">Upgrade</string>
+    <string name="str_about">About</string>
+    <string name="str_quit">Quit</string>
+    
+    <string name="dnd"><b>DESIGNED &amp; DEVELOPED BY</b></string>
+    <string name="contact"><b>CONTACT</b></string>
+    <string name="pp">Petar Puric</string>
+    <string name="gm">puric.petarr@gmail.com</string>
+    
+    
+    <string name="txthint">Password</string>
+	<string name="numbers">Numbers</string>
+	<string name="spec_char">Special Characters</string>
+	<string name="upper_case">Upper Case</string>
+	<string name="lower_case">Lower Case</string>
+	<string name="length">Length:</string>
+	<string name="btn_save">Save</string>
+	<string name="btn_gen">Generate</string>
+	<string name="btn_view">View Saved</string>
+	<string name="tbl_id">ID</string>
+	<string name="tbl_site">Use</string>
+	<string name="tbl_pass">Password</string>
+	<string name="btn_cancel">Cancel</string>
+	
+	<string name="diasave">Save</string>
+	<string name="diacancel">Cancel</string>
+	<string name="diause">Use</string>
+	<string name="diapassword">Password</string>
+	
+	<string name="enter_passcode">Enter Passcode</string>
+	<string name="nums_1">1</string>
+	<string name="nums_2">2</string>
+	<string name="nums_3">3</string>
+	<string name="nums_4">4</string>
+	<string name="nums_5">5</string>
+	<string name="nums_6">6</string>
+	<string name="nums_7">7</string>
+	<string name="nums_8">8</string>
+	<string name="nums_9">9</string>
+	<string name="nums_0">0</string>
+	<string name="set_passcode">Set PassCode</string>
+	
+	<string name="ic_back">BACK</string>
+	
+	<color name="white">#FFFFFF</color>
+	<color name="black">#000000</color>
+	<color name="teal">#008080</color>
+	<color name="red">#FF0000</color>
+	<color name="tan">#97694F</color>
+	<color name="peach">#F7DCB4</color>
+	<color name="dgreen">#5C755E</color>
+	<color name="green">#9FEE00</color>
+	<color name="dblue">#5AA5EF</color>
+	
+	<string name="pref_change_pp">Security Pin</string>
+	<string name="pref_change_pp_summary">Change pin</string>
+	
+	<string name="prefs_oldpass">Old Pin:</string>
+	<string name="prefs_newpass">New Pin:</string>
+	<string name="prefs_confirmnew">Confirm New Pin:</string>
+	<string name="prefs_setpass">Set Pin:</string>
+
+</resources>

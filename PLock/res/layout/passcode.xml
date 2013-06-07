@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    
+    <TableLayout 
+        android:id="@+id/tblPassCode"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent">
+        
+        <TableRow 
+            android:id="@+id/trTvEnterCode"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:paddingTop="15dp">
+            
+            <TextView 
+                android:id="@+id/tvEnterCode"
+                android:text="@string/enter_passcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/red"
+                android:textSize="20sp"/>
+            
+        </TableRow>
+        
+        <TableRow 
+            android:id="@+id/trNums123"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            >
+            
+            <Button 
+                android:id="@+id/btnNums1"
+                android:layout_height="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/nums_1"
+                />
+            
+            <Button
+                android:id="@+id/btnNums2"
+                android:layout_height="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/nums_2" />
+            
+            <Button
+                android:id="@+id/btnNums3"
+                android:layout_height="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/nums_3" />
+            
+        </TableRow>
+        
+        <TableRow 
+            android:id="@+id/trNums456"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp">
+            
+            <Button
+                android:id="@+id/btnNums4"
+                android:layout_height="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/nums_4"/>
+
+            <Button 
+                android:id="@+id/btnNums5"
+                android:layout_height="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/nums_5" />
+            
+            <Button
+                android:id="@+id/btnNums6"
+                android:layout_height="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/nums_6" />
+
+        </TableRow>
+        
+        <TableRow 
+            android:id="@+id/trNums789"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp">
+            
+            <Button 
+                android:id="@+id/btnNums7"
+                android:layout_height="60dp"
+                android:width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/nums_7" />
+            
+            <Button
+                android:id="@+id/btnNums8"
+                android:layout_height="60dp"
+                android:width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/nums_8" />
+            
+            <Button
+                android:id="@+id/btnNums9"
+                android:layout_height="60dp"
+                android:width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/nums_9" />
+            
+            
+        </TableRow>
+        
+        <TableRow 
+            android:id="@+id/trDel0Ch"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp">
+            
+            <ImageButton 
+                android:id="@+id/btnDel"
+                android:layout_height="60dp"
+                android:layout_width="0dp"
+                android:src="@drawable/delete"
+                android:layout_weight="0.3"/>
+            
+            <Button
+                android:id="@+id/btnNums0"
+                android:layout_height="60dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:text="@string/nums_0" />
+            
+            <ImageButton 
+                android:id="@+id/btnCheck"
+                android:layout_height="60dp"
+                android:layout_width="0dp"
+                android:src="@drawable/check"
+                android:layout_weight="0.3"/>
+            
+            
+            
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/trLastRow"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="60dp">
+        
+        
+       <TextView
+           android:id="@+id/tvLRPassCode"
+           android:layout_height="wrap_content"
+           android:layout_width="0dp"
+           android:layout_weight="0.5"
+           android:gravity="center_horizontal"
+           android:textColor="@color/green"
+           android:textSize="20sp" 
+           android:visibility="gone"
+           
+           />
+        
+        
+    	<Button
+    	    android:id="@+id/btnSetPassCode"
+    	    android:layout_height="wrap_content"
+    	    android:layout_width="0dp"
+    	    android:layout_weight="0.5"
+    	    android:text="@string/set_passcode"
+    	    android:visibility="gone"
+    	    android:clickable="false" />
+    
+        </TableRow>
+    
+    </TableLayout>
+    
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    
+    
+    
+    
+    <item
+        android:id="@+id/menu_checkall"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:visible="false"
+        android:icon="@drawable/ic_action_checkall"
+        android:title="Check All"
+        />
+    
+    <item 
+        android:id="@+id/menu_discard"
+        android:orderInCategory="2"
+        android:visible="false"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_discard"
+        android:title="Delete"/>
+    
+    <item
+        android:id="@+id/menu_edit"
+        android:orderInCategory="3"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_edit" />
+        
+
+</menu>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+    
+    <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        
+        <TextView 
+            android:id="@+id/tvChkSaveErr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"/>
+        
+        <TableRow 
+            android:id="@+id/trUse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="5dp">
+            
+          
+            
+            <TextView 
+                android:id="@+id/tvUse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/diause"
+                android:textSize="16dp"
+                android:textColor="@color/teal"/>
+            
+            <EditText 
+                android:id="@+id/edtUse"
+                android:layout_width="10dp" 
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+            
+        </TableRow>
+        
+     
+        
+          
+        
+        <TableRow 
+            android:id="@+id/trPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="5dp">
+            
+            <TextView 
+                android:id="@+id/tvPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/diapassword"
+                android:textSize="16dp"
+                android:textColor="@color/teal"/>
+            
+            <EditText
+                android:id="@+id/edtPassToSave"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black" />
+            
+        </TableRow>
+        
+        
+        
+        
+        <TableRow 
+            android:id="@+id/trButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            
+            <Button 
+                android:id="@+id/btnSaveToDB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_save"
+                android:textColor="@color/black"
+                />
+            
+            <Button 
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_cancel"
+                android:textColor="@color/black"/>
+            
+        </TableRow>
+        
+        
+    </TableLayout>
+
+</LinearLayout>

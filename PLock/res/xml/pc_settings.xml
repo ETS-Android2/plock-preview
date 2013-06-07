@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory 
+        android:title="Security Pin Settings">
+        
+       <com.petarpuric.plock.CompoundEditText
+           android:title="Change Pin"
+            />
+        
+        
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>

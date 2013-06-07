@@ -1,0 +1,191 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        >
+        
+        <TableRow
+            android:id="@+id/tr00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            
+             <EditText 
+        android:id="@+id/edtPassword"
+       	android:layout_width="0dp"
+        android:layout_marginTop="15dp"
+        android:hint="@string/txthint"
+        android:layout_weight="0.5"
+        android:textColor="@color/black"
+        />
+        
+        </TableRow>
+              
+        
+         <TableRow
+         android:id="@+id/trChkError"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+       
+        <TextView 
+        android:id="@+id/tvChkError"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/red"
+        android:layout_marginTop="10dp"/>
+        
+        </TableRow>
+       
+   
+        <TableRow 
+            android:id="@+id/tr01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <CheckBox 
+                android:id="@+id/chkNumbers"
+                android:text="@string/numbers"
+                android:layout_weight="0.5"
+                android:textColor="@color/teal" />
+            
+            <CheckBox 
+                android:id="@+id/chkSpecChar"
+                android:text="@string/spec_char"
+                android:layout_weight="0.5"
+                android:textColor="@color/teal"
+                />
+            
+        </TableRow>
+        
+        <TableRow 
+            android:id="@+id/tr02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <CheckBox 
+                android:id="@+id/chkUpperCase"
+                android:text="@string/upper_case"
+                android:layout_weight="0.5"
+                android:textColor="@color/teal"/>
+            
+            <CheckBox 
+                android:id="@+id/chkLowerCase"
+                android:text="@string/lower_case"
+                android:layout_weight="0.5" 
+                android:textColor="@color/teal"/>
+            
+            
+        </TableRow>
+        
+       
+        
+        <TableRow 
+            android:id="@+id/tr03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            
+            
+              <TextView 
+        android:id="@+id/tvLength"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/length"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="17sp"
+        android:textColor="@color/teal"
+        android:layout_weight="1"/>
+              
+              <TextView 
+                  android:id="@+id/tvLenOfP"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:textSize="17sp"
+                  android:layout_marginTop="15dp"
+                  android:textColor="@color/teal"
+                  android:layout_weight=".5"/>
+    
+    <ImageButton 
+        android:id="@+id/btnLengthUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/up"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_weight="1"/>
+    
+    <ImageButton 
+        android:id="@+id/btnLengthDown"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/down"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_weight="1"/>
+            
+            
+        </TableRow>
+        
+        
+    </TableLayout>
+    
+    
+  
+    
+    
+    <Button 
+        android:id="@+id/btnGenerate"
+        android:text="@string/btn_gen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:drawableRight="@drawable/generate"
+        android:textColor="@color/black"
+        />
+    
+    <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        
+        
+        <TableRow 
+            android:id="@+id/save_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <Button 
+        android:id="@+id/btnSave"
+        android:text="@string/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:drawableRight="@drawable/save"
+        android:textColor="@color/black"/>
+            
+            <Button 
+                android:id="@+id/btnViewSaved"
+                android:text="@string/btn_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:drawableRight="@drawable/viewsaved" 
+                android:textColor="@color/black"/>
+            
+            
+        </TableRow>
+        
+    </TableLayout>
+    
+    
+
+</LinearLayout>

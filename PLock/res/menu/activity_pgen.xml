@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_overflow"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_overflow"
+        android:title="@string/menu_settings">
+    
+        <menu>
+            
+            <item android:id="@+id/sub_upgrade"
+                  android:title="@string/str_upgrade" />
+            <item android:id="@+id/sub_about"
+                  android:title="@string/str_about" />
+            <item android:id="@+id/sub_quit"
+                  android:title="@string/str_quit" />
+            
+        </menu>
+    
+	</item>
+</menu>
