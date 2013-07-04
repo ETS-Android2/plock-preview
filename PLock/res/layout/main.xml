@@ -55,13 +55,13 @@
                 android:id="@+id/chkNumbers"
                 android:text="@string/numbers"
                 android:layout_weight="0.5"
-                android:textColor="@color/teal" />
+                android:textColor="@color/dblue" />
             
             <CheckBox 
                 android:id="@+id/chkSpecChar"
                 android:text="@string/spec_char"
                 android:layout_weight="0.5"
-                android:textColor="@color/teal"
+                android:textColor="@color/dblue"
                 />
             
         </TableRow>
@@ -75,13 +75,13 @@
                 android:id="@+id/chkUpperCase"
                 android:text="@string/upper_case"
                 android:layout_weight="0.5"
-                android:textColor="@color/teal"/>
+                android:textColor="@color/dblue"/>
             
             <CheckBox 
                 android:id="@+id/chkLowerCase"
                 android:text="@string/lower_case"
                 android:layout_weight="0.5" 
-                android:textColor="@color/teal"/>
+                android:textColor="@color/dblue"/>
             
             
         </TableRow>
@@ -103,7 +103,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="5dp"
         android:textSize="17sp"
-        android:textColor="@color/teal"
+        android:textColor="@color/dblue"
         android:layout_weight="1"/>
               
               <TextView 
@@ -112,7 +112,7 @@
                   android:layout_height="wrap_content"
                   android:textSize="17sp"
                   android:layout_marginTop="15dp"
-                  android:textColor="@color/teal"
+                  android:textColor="@color/dblue"
                   android:layout_weight=".5"/>
     
     <ImageButton 
@@ -122,7 +122,9 @@
         android:src="@drawable/up"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:background="@drawable/buttons"
+                />
     
     <ImageButton 
         android:id="@+id/btnLengthDown"
@@ -131,7 +133,9 @@
         android:src="@drawable/down"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:background="@drawable/buttons"
+                />
             
             
         </TableRow>
@@ -150,7 +154,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:drawableRight="@drawable/generate"
-        android:textColor="@color/black"
+        android:textColor="@color/dblue"
+        android:background="@drawable/buttons"
         />
     
     <TableLayout 
@@ -161,7 +166,8 @@
         <TableRow 
             android:id="@+id/save_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
             
             <Button 
         android:id="@+id/btnSave"
@@ -170,7 +176,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:drawableRight="@drawable/save"
-        android:textColor="@color/black"/>
+        android:background="@drawable/buttons"
+                android:textColor="@color/dblue"/>
             
             <Button 
                 android:id="@+id/btnViewSaved"
@@ -179,7 +186,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:drawableRight="@drawable/viewsaved" 
-                android:textColor="@color/black"/>
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue"/>
             
             
         </TableRow>

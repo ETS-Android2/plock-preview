@@ -42,6 +42,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
                 android:text="@string/nums_1"
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue"
                 />
             
             <Button
@@ -49,14 +51,18 @@
                 android:layout_height="60dp"
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
-                android:text="@string/nums_2" />
+                android:text="@string/nums_2"
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue" />
             
             <Button
                 android:id="@+id/btnNums3"
                 android:layout_height="60dp"
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
-                android:text="@string/nums_3" />
+                android:text="@string/nums_3"
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue" />
             
         </TableRow>
         
@@ -71,21 +77,27 @@
                 android:layout_height="60dp"
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
-                android:text="@string/nums_4"/>
+                android:text="@string/nums_4"
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue"/>
 
             <Button 
                 android:id="@+id/btnNums5"
                 android:layout_height="60dp"
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
-                android:text="@string/nums_5" />
+                android:text="@string/nums_5"
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue" />
             
             <Button
                 android:id="@+id/btnNums6"
                 android:layout_height="60dp"
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
-                android:text="@string/nums_6" />
+                android:text="@string/nums_6"
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue" />
 
         </TableRow>
         
@@ -100,21 +112,27 @@
                 android:layout_height="60dp"
                 android:width="0dp"
                 android:layout_weight="0.3"
-                android:text="@string/nums_7" />
+                android:text="@string/nums_7"
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue" />
             
             <Button
                 android:id="@+id/btnNums8"
                 android:layout_height="60dp"
                 android:width="0dp"
                 android:layout_weight="0.3"
-                android:text="@string/nums_8" />
+                android:text="@string/nums_8" 
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue"/>
             
             <Button
                 android:id="@+id/btnNums9"
                 android:layout_height="60dp"
                 android:width="0dp"
                 android:layout_weight="0.3"
-                android:text="@string/nums_9" />
+                android:text="@string/nums_9"
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue" />
             
             
         </TableRow>
@@ -130,21 +148,27 @@
                 android:layout_height="60dp"
                 android:layout_width="0dp"
                 android:src="@drawable/delete"
-                android:layout_weight="0.3"/>
+                android:layout_weight="0.3"
+                android:background="@drawable/buttons"
+                />
             
             <Button
                 android:id="@+id/btnNums0"
                 android:layout_height="60dp"
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
-                android:text="@string/nums_0" />
+                android:text="@string/nums_0"
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue" />
             
             <ImageButton 
                 android:id="@+id/btnCheck"
                 android:layout_height="60dp"
                 android:layout_width="0dp"
                 android:src="@drawable/check"
-                android:layout_weight="0.3"/>
+                android:layout_weight="0.3"
+                android:background="@drawable/buttons"
+                />
             
             
             

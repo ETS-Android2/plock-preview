@@ -34,7 +34,7 @@
                 android:layout_weight="0.5"
                 android:text="@string/diause"
                 android:textSize="16dp"
-                android:textColor="@color/teal"/>
+                android:textColor="@color/dblue"/>
             
             <EditText 
                 android:id="@+id/edtUse"
@@ -64,7 +64,7 @@
                 android:layout_weight="0.5"
                 android:text="@string/diapassword"
                 android:textSize="16dp"
-                android:textColor="@color/teal"/>
+                android:textColor="@color/dblue"/>
             
             <EditText
                 android:id="@+id/edtPassToSave"
@@ -82,7 +82,8 @@
             android:id="@+id/trButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp">
             
             <Button 
                 android:id="@+id/btnSaveToDB"
@@ -90,7 +91,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/btn_save"
-                android:textColor="@color/black"
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue"
                 />
             
             <Button 
@@ -99,7 +101,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/btn_cancel"
-                android:textColor="@color/black"/>
+                android:background="@drawable/buttons"
+                android:textColor="@color/dblue"/>
             
         </TableRow>
         

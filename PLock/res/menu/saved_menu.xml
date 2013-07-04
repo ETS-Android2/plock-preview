@@ -27,6 +27,12 @@
         android:orderInCategory="3"
         android:showAsAction="always"
         android:icon="@drawable/ic_action_edit" />
+    
+    <item 
+        android:id="@+id/sync"
+        android:orderInCategory="4"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_cloud"/>
         
 
 </menu>

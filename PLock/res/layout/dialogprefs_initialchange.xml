@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:text="@string/prefs_setpass"
         android:textSize="17sp"
-        android:textColor="@color/dblue"
+        android:textColor="@color/white"
         android:layout_marginRight="15dp"/>     
          
     <EditText 

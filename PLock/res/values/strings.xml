@@ -57,7 +57,7 @@
 	<color name="peach">#F7DCB4</color>
 	<color name="dgreen">#5C755E</color>
 	<color name="green">#9FEE00</color>
-	<color name="dblue">#5AA5EF</color>
+	<color name="dblue">#083EA1</color>
 	
 	<string name="pref_change_pp">Security Pin</string>
 	<string name="pref_change_pp_summary">Change pin</string>

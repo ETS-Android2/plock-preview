@@ -1,5 +1,12 @@
 package com.petarpuric.plock;
 
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,40 +19,51 @@ import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.ClipData;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.ClipboardManager;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
-import android.view.Gravity;
+
+import android.util.Log;
+
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
+
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
+
 import android.widget.ListView;
-import android.widget.TableLayout;
-import android.widget.TableRow;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.holoeverywhere.app.Activity;
-import org.holoeverywhere.widget.Button;
+
 import org.holoeverywhere.widget.CheckBox;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
-import com.petarpuric.plock.PasswordsAdapter.ViewHolder;
+import com.dropbox.client2.DropboxAPI;
+import com.dropbox.client2.android.AndroidAuthSession;
+import com.dropbox.client2.exception.DropboxException;
+import com.dropbox.client2.exception.DropboxUnlinkedException;
+import com.dropbox.client2.session.AccessTokenPair;
+import com.dropbox.client2.session.AppKeyPair;
+import com.dropbox.client2.session.Session.AccessType;
+
+
 
 
 public class SavedPass extends Activity {
+	//DROPBOX DISABLED IN THIS VERSION
+	//private static final String APP_KEY = "e4gpjbzj6m1vt0n";
+	//private static final String APP_SECRET = "eczxaa61dl8euf9";
+	//private static final AccessType ACCESS_TYPE = AccessType.APP_FOLDER;
 	
+	static final int NEWUPLOAD = 0;
+	DropboxAPI<AndroidAuthSession> mApi;
 	DatabaseHelper dbHelp = new DatabaseHelper(this);
 	
 	//List of passwords to be stored
@@ -57,12 +75,15 @@ public class SavedPass extends Activity {
 	
 	private ListView mListView;
 	private PasswordsAdapter listAdapter;
+	private DropboxAPI<AndroidAuthSession> mDBApi;
 	
 	MenuItem checkAll, delete;
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.listview);
+		
+		
 		
 		mListView = (ListView) findViewById(R.id.mListView);
 		
@@ -83,8 +104,35 @@ public class SavedPass extends Activity {
 			ab.setIcon(R.drawable.ic_action_home);
 			ab.setDisplayShowTitleEnabled(false);
 			
-		 
+			AppKeyPair appKeys = new AppKeyPair(APP_KEY, APP_SECRET);
+			AndroidAuthSession session = new AndroidAuthSession(appKeys, ACCESS_TYPE);
+			mDBApi = new DropboxAPI<AndroidAuthSession>(session);
 		 }
+	
+	protected void onResume() {
+	    super.onResume();
+
+	    if (mDBApi.getSession().authenticationSuccessful()) {
+	        try {
+	            
+	            mDBApi.getSession().finishAuthentication();
+
+	            AccessTokenPair tokens = mDBApi.getSession().getAccessTokenPair();
+	            
+	            
+	    	    
+	            
+	        } catch (IllegalStateException e) {
+	            Log.i("DbAuthLog", "Error authenticating", e);
+	        }
+	    }
+	    
+	    
+	    
+	}
+	
+	
+	 
 
 	public boolean onCreateOptionsMenu(Menu menu) {
 		
@@ -105,6 +153,10 @@ public class SavedPass extends Activity {
 			SavedPass.super.onBackPressed();
 			break;
 		
+		case R.id.sync:
+			syncDropBox(pw);
+			break;
+			
 		case R.id.menu_edit:
 			toggleEditOptions();
 			break;
@@ -120,6 +172,43 @@ public class SavedPass extends Activity {
 		
 		return true;
 	}
+	
+	private void syncDropBox(ArrayList<Passwords> pw) {
+		
+	
+		try {
+			FileOutputStream f = openFileOutput("001.txt", Context.MODE_PRIVATE);
+			OutputStreamWriter osw = new OutputStreamWriter(f);
+			
+			
+			for (Passwords passwords : pw) {
+				osw.write("\n" + passwords.getUse() + "-" + passwords.getPass());
+				
+			}
+			
+			
+			osw.flush();
+			osw.close();
+			
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		mDBApi.getSession().startAuthentication(SavedPass.this);
+		
+		
+		
+		
+		
+		
+	}
+	
 	
 	private boolean deleteSelected() {
 		SQLiteDatabase db = dbHelp.getWritableDatabase();
@@ -277,7 +366,7 @@ public class SavedPass extends Activity {
 				ClipData clip = android.content.ClipData.newPlainText("", getPassword(pos));
 				cp.setPrimaryClip(clip);
 			}
-			
+			Toast.makeText(getApplicationContext(), "Password copied!", Toast.LENGTH_SHORT).show();
 			return false;
 		}
 		
