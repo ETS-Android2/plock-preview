@@ -1,4 +1,4 @@
-PLock is an Android Password Generator and Manager project that is still being developed solely by Petar Puric. It uses the HoloEverywhere and ActionBarSherlock libraries in order to add the Holo Theme and ActionBar Menu to older versions of Android. 
+PLock is an Android Password Generator and Manager project that is my first ever code contribution and not all indicative of my current skill, I keep this to remind myself of how far I've come. It uses the HoloEverywhere and ActionBarSherlock libraries in order to add the Holo Theme and ActionBar Menu to older versions of Android. 
 
 Using the application
 ---------------------
